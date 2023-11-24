@@ -58,6 +58,7 @@
 	"floory": 12.5,
 	"roofy": 3,
 	"customtimer": [
+		[0,["set","drawable"],false],
 		[0,"setframe",["property","phase"]],
 		[0,["set","quadsave"],["property","quad"]],
 
@@ -77,6 +78,7 @@
 
 		[0,["set","quad"],["property","quadsave"]],
 
+		[0,["set","drawable"],true],
 		[1,["set","quadgroup"],["property","phases"]],
 		[0,"setframe",["property","phase"]],
 		[0,["set","phaseatks"],["property","quad"]],
