@@ -1,0 +1,9 @@
+base=shop platform
+{
+    "transformanimation": "bstar",
+    "transformsetparametersbeforespawn": true,
+    "transformsetparameters": [
+        ["spawnchildren",["white poof"]],
+        ["spawnchildrenoffsety",[-1]],
+    ]
+}

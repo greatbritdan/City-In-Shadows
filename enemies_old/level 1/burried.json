@@ -1,0 +1,29 @@
+{
+	"quadcount": 3,
+	"nospritesets": true,
+	"drawback": true,
+
+	"width": 0.75,
+	"height": 0.75,
+	"active": false,
+
+	"category": 5,
+	"mask": [true, 
+		false, false, false, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"transforms": true,
+	"transformsinto": "burried alive",
+	"transformtrigger": "playernear",
+	"playerneardist": [-1.25,-4.25,3.25,5],
+
+	"offsetX": 6,
+	"offsetY": 4,
+	"quadcenterX": 8,
+	"quadcenterY": 8
+}

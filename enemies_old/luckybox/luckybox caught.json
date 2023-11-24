@@ -1,0 +1,18 @@
+base=luckybox
+{
+	"hidden": true,
+	
+	"quadcount": 1,
+	"animationtype": false,
+	"playerneardist": false,
+	"blockportaltile": false,
+
+	"customtimer": [
+		[0,["set","transformsinto"],["property","coins"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"lifetime": 0.375,
+	"transformsinto": "nil",
+	"transformtrigger": "lifetime"
+}

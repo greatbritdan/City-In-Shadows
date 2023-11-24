@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "playsound", "blockhit" ] ],
+    "conditions": [ [ "ifcoins", "<", "70" ] ],
+    "triggers": [ [ "animationtrigger", "bstar" ] ]
+}

@@ -1,0 +1,48 @@
+{
+	"quadcount": 4,
+	"nospritesets": true,
+
+	"coins": 0,
+	"rightclick": [
+		["text","coins:"],
+		["dropdown","coins",5,["coin block","coin block 5","coin block 10"],["1","5","10"]]
+	],
+	"rightclicktypes": ["coins"],
+	"rightclickdefaults": ["coin block"],
+
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.125,
+
+	"width": 1,
+	"height": 1,
+	"active": true,
+	"static": true,
+
+	"resistsfire": true,
+	"freezable": false,
+
+	"category": 2,
+	"mask": [true, 
+		false, false, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"transforms": true,
+	"transformsinto": "luckybox escape",
+	"transformtrigger": "playernear",
+	"playerneardist": [0.125, 1, 0.75, 0.25],
+	"transformpassedparameters": ["coins"],
+
+	"offsetX": 8,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"blockportaltile": true
+}

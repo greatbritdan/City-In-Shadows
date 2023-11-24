@@ -1,0 +1,28 @@
+base=burried
+{
+	"hidden": true,
+	"drawback": false,
+
+	"active": true,
+	"speedy": -20,
+	"kills": true,
+
+	"resistsfire": true,
+	"freezable": false,
+
+	"animationtype": "frames",
+	"animationframes": 2,
+	"animationstart": 2,
+	"animationspeed": 0.125,
+
+	"movement": "chase",
+	"chasespeed": 4,
+	"chaseacceleration": 16,
+	"chasespace": 1.25,
+	"chasebounceforcex": 4,
+	"chasebounceforcey": 16,
+	
+	"lifetime": 5,
+	"transformsinto": "coin block",
+	"transformtrigger": "lifetime",
+}

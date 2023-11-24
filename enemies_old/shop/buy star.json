@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "removecoins", "70" ], [ "makeinvincible", "10", "everyone" ], [ "transformenemy", "bstar" ], [ "animationoutput", "bstargot", "on" ], [ "sleep", "0.05" ], [ "animationoutput", "bstargot", "off" ] ],
+    "conditions": [ [ "ifcoins", ">", "69" ] ],
+    "triggers": [ [ "animationtrigger", "bstar" ] ]
+}

@@ -1,0 +1,32 @@
+{
+    "quadcount": 4,
+    "nospritesets": true,
+    "drawback": true,
+    
+    "quadcenterX": 16,
+    "quadcenterY": 16,
+    "offsetX": 6,
+    "offsetY": 12 ,
+
+    "animationtype": "frames",
+    "animationframes": 4,
+    "animationstart": 1,
+    "animationspeed": 0.125,
+
+    "width": 0.75,
+    "height": 0.75,
+
+    "static": true,
+    "active": true,
+    
+    "category": 6,
+    "mask": [true, true, false, true, true, true],
+
+    "transforms": true,
+    "transformsinto": "shop platform",
+    "transformtrigger": "animation",
+    "transformanimation": "",
+
+    "resistseverything": true,
+    "freezable": false
+}

@@ -1,0 +1,57 @@
+base=luckybox
+{
+	"hidden": true,
+	
+	"static": false,
+	"playerneardist": false,
+	"blockportaltile": false,
+
+	"speedy": -15,
+	"gravity": 40,
+
+	"sticktoplayer": 1,
+	"customtimer": [
+		[0,["set","passive"],["property","passivecollide"]],
+		[0,["set","passivecollide"],["property","addoutput"]],
+		[0,["set","customtimertimer"],0],
+		[0,["set","passivecollide"],["property","passive"]],
+		[0,["set","sticktoplayer"]],
+		[0,["set","x"],["property","startx"]],
+		[0,["set","y"],["property","starty"]],
+
+		[0,["set","quadg"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","outtable"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",2],
+		[0,["set","mario"],["property","quad"]],
+		[0,["set","quadgroup"],["property","mario"]],
+		[0,"setframe","x"],
+
+		[0,["set","mx"],["property","quad"]],
+		[0,["add","mx"],0.375],
+		[0,["set","ex"],["property","x"]],
+		[0,["add","ex"],0.5],
+
+		[0,["if","ex",">","mx"],["add","currentcustomtimerstage"],2],
+			[0,["set","speedx"],-5],
+			[0,["add","currentcustomtimerstage"],1],
+		[0,["set","speedx"],5],
+
+		[0,["if","falling","==",true],["add","currentcustomtimerstage"],5],
+			[0,["set","abs"],["property","mx"]],
+			[0,["subtract","abs"],["property","ex"]],
+			[0,["abs","abs"]],
+			[0,["if","abs",">",2],["add","currentcustomtimerstage"],1],
+				[0,["set","speedy"],-15],
+
+		[0,["set","quadgroup"],["property","quadg"]],
+		[0,"setframe",["property","quadi"]],
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],7],
+	],
+
+	"transformsinto": "luckybox caught",
+	"transformtrigger": "floorcollide",
+	"transformtriggerobjectcollide": "player"
+}

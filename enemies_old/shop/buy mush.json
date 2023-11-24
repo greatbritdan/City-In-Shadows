@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "removecoins", "30" ], [ "setplayersize", "2", "player 1" ], [ "transformenemy", "bmush" ], [ "animationoutput", "bmushgot", "on" ], [ "sleep", "0.05" ], [ "animationoutput", "bmushgot", "off" ] ],
+    "conditions": [ [ "ifcoins", ">", "29" ], [ "playerissize", "1", "player 1" ] ],
+    "triggers": [ [ "animationtrigger", "bmush" ] ]
+}

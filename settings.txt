@@ -1,0 +1,7 @@
+name= city in shadows
+author=britdan
+description= one last chance   to claim back     the city...
+lives=5
+physics=5
+camera=2
+realtime=t
