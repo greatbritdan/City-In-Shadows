@@ -1,0 +1,15 @@
+base=white poof
+{
+	"hidden":true,
+
+	"animationscalex":2,
+	"animationscaley":2,
+
+	"quadcenterX":8,
+	"quadcenterY":8,
+	"offsetX":12,
+	"offsetY":-2,
+
+	"width":1.5,
+	"height":1.5,
+}

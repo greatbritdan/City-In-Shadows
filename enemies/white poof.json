@@ -1,0 +1,22 @@
+{
+	"hidden":true,
+	"quadcount":4,
+	"nospritesets":true,
+
+	"quadcenterX":8,
+	"quadcenterY":8,
+	"offsetX":6,
+	"offsetY":2,
+
+	"animationtype":"frames",
+	"animationframes":4,
+	"animationstart":1,
+	"animationspeed":0.05,
+	"lifetime":0.2,
+
+	"width":0.75,
+	"height":0.75,
+
+	"active":false,
+	"resistseverything":true,
+}

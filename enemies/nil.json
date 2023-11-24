@@ -1,0 +1,12 @@
+{
+	"hidden": true,
+	"visible": false,
+	"width": 0,
+	"height": 0,
+	"instantdelete": true,
+	"delete": true,
+	"dead": true,
+
+	"carryable": false,
+	"carryrange": false
+}
