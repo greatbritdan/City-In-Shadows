@@ -1,0 +1,70 @@
+{
+	"quadcount": 8,
+	"nospritesets": true,
+
+	"xoff": 0,
+	"rightclick": [
+		["text","xoffset:"],
+		["input","xoff",3],
+		["text","direction:"],
+		["dropdown","dir",6,["right","left"]]
+	],
+	"rightclicktypes": ["num","string"],
+	"rightclickdefaults": ["0","left"],
+
+	"quadcenterX": 8,
+	"quadcenterY": 4,
+	"offsetX": 6,
+	"offsetY": 7,
+	
+	"width": 0.75,
+	"height": 0.5,
+	"active": false,
+	"static": true,
+
+	"blowrange": [-2,0,2,0.5],
+	"blowspeedx": -40,
+
+	"spawnallow": false,
+	"spawnsenemy": "blowpart",
+	"spawnenemydelays": [0.1],
+	"spawnenemyoffsetx": -0.375,
+	"spawnenemyoffsety": 0.0625,
+	"spawnenemyspeedx": -4,
+	"spawnenemyspeedyrandomstart": 1,
+	"spawnenemyspeedyrandomend": -1,
+	"spawnpassedparameters": ["animationdirection"],
+
+	"doesntunrotate": true,
+	"customtimer": [
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]],
+
+		[0,["set","spawnallow"]],
+		[0,["if","dir","~=","right"],["add","currentcustomtimerstage"],5],
+			[0,["set","animationscalex"],-1],
+			[0,["set","blowrange"],[0.75,0,2,0.5]],
+			[0,["set","blowspeedx"],40],
+			[0,["set","spawnenemyoffsetx"],0.375],
+			[0,["set","spawnenemyspeedx"],4],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[2,"setframe",2],
+		[0.05,"setframe",3],
+		[0.05,"setframe",4],
+		[0.05,"setframe",5],
+		[0.05,"setframe",6],
+		[0.05,"setframe",7],
+		[0.45,"setframe",8],
+		[0,["set","spawnallow"],true],
+		[0,["set","blowchecktable"],["player"]],
+		[2,"setframe",3],
+		[0,["set","spawnallow"]],
+		[0,["set","blowchecktable"]],
+		[0.05,"setframe",2],
+		[0.05,"setframe",1],
+
+		[0,["set","currentcustomtimerstage"],["property","loopline"]]
+	]
+}

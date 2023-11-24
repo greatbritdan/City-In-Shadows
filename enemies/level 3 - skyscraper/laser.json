@@ -1,0 +1,77 @@
+{
+	"showicononeditor": true,
+	"quadcount": 16,
+	"nospritesets": true,
+
+	"offsetX": 8,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"width": 2,
+	"height": 2,
+	"active": false,
+
+	"doesntunrotate": true,
+	"rotation": 0,
+
+	"spawnsenemy": "laser projectile",
+	"spawnenemydelays": [99e99],
+	"spawnenemyoffsety": -0.625,
+
+	"projspeed": 6,
+	"customtimer": [
+		[0,["set","drawable"],false],
+
+		[0,["set","frame1"],["property","ldir"]],
+		[0,["add","frame1"],1],
+		[0,["set","frame2"],["property","ldir"]],
+		[0,["add","frame2"],2],
+		[0,["set","frame3"],["property","ldir"]],
+		[0,["add","frame3"],3],
+		[0,["set","frame4"],["property","ldir"]],
+		[0,["add","frame4"],4],
+		
+		[0,["if","ldir","~=",0],["add","currentcustomtimerstage"],2],
+			[0,["set","spawnenemyspeedy"],["property","projspeed"]],
+			[0,["add","y"],1],
+
+		[0,["if","ldir","~=",4],["add","currentcustomtimerstage"],4],
+			[0,["set","spawnenemyspeedx"],["property","projspeed"]],
+			[0,["reverse","spawnenemyspeedx"]],
+			[0,["subtract","x"],0.5],
+			[0,["add","y"],0.5],
+
+		[0,["if","ldir","~=",8],["add","currentcustomtimerstage"],2],
+			[0,["set","spawnenemyspeedy"],["property","projspeed"]],
+			[0,["reverse","spawnenemyspeedy"]],
+
+		[0,["if","ldir","~=",12],["add","currentcustomtimerstage"],3],
+			[0,["set","spawnenemyspeedx"],["property","projspeed"]],
+			[0,["add","x"],0.5],
+			[0,["add","y"],0.5],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[1.5,"setframe",["property","frame1"]],
+		[0,["set","drawable"],true],
+		[0.05,"setframe",["property","frame2"]],
+		[0.05,"setframe",["property","frame3"]],
+		[0.4,"spawnenemy"],
+
+		[0.5,"setframe",["property","frame2"]],
+		[0.05,"setframe",["property","frame1"]],
+		[0.05,["set","drawable"],false],
+
+		[0.4,["set","currentcustomtimerstage"],["property","loopline"]]
+	],
+
+	"rightclick": [
+		["text","facing"],
+		["dropdown","ldir",5,[0,4,8,12],["down","left","up","right"]],
+		["text","speed"],
+		["input","projspeed",5]
+	],
+	"rightclicktypes": ["num","num"],
+	"rightclickdefaults": ["0","8"]
+}

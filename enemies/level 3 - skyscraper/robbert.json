@@ -1,0 +1,89 @@
+{
+	"quadcount": 5,
+	"nospritesets": true,
+
+	"offsetX": 6,
+	"offsetY": -13,
+	"quadcenterX": 8,
+	"quadcenterY": 27,
+
+	"width": 0.75,
+	"height": 1.5,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"movement": "chase",
+
+	"chasespeed": 3,
+	"chaseacceleration": 6,
+	"chasespace": 1.25,
+	"truffleshufflespeed": 3,
+	"truffleshuffleacceleration": 6,
+
+	"kills": true,
+
+	"shothealth": 3,
+	"transforms": true,
+	"transformtriggerobjectcollide": "tile",
+	"transformsinto": ["coin block","robbert bump","robbert bump","robbert bump"],
+	"transformtrigger": ["shot","shotdamage","_","_"],
+	"transformpassedparameters": ["t_speedx","shothealth","quadno"],
+
+	"rightclick": [
+		["text","type:"],
+		["dropdown","quadno",7,[1,2,3,4,5],["normal","broke","headnt","bodynt","facent"]],
+		["text","xoffset:"],
+		["input","xoff",3],
+		["text","yoffset:"],
+		["input","yoff",3]
+	],
+	"rightclicktypes": ["num","num","num"],
+	"rightclickdefaults": ["1","0","0"],
+
+	"cansee": true,
+	"customtimer": [
+		[0,"setframe",["property","quadno"]],
+		
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]],
+		[0,["divide","yoff"],16],
+		[0,["add","y"],["property","yoff"]],
+		[0,["if","quadno","==",3],["set","cansee"],false],
+		[0,["if","quadno","==",5],["set","cansee"],false],
+
+		[0,["if","cansee","==",true],["add","currentcustomtimerstage"],2],
+			[0,["set","movement"],"truffleshuffle"],
+			[0,["set","transformtrigger"],["shot","shotdamage","leftcollide","rightcollide"]],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["if","cansee","==",true],["add","currentcustomtimerstage"],6],
+			[0,["set","truffleshufflespeed"],["property","shothealth"]],
+			[0,["reverse","truffleshufflespeed"]],
+			[0,["add","truffleshufflespeed"],6],
+			[0,["set","truffleshuffleacceleration"],["property","truffleshufflespeed"]],
+			[0,["multiply","truffleshuffleacceleration"],2],
+			[0,["add","currentcustomtimerstage"],5],
+		[0,["set","chasespeed"],["property","shothealth"]],
+		[0,["reverse","chasespeed"]],
+		[0,["add","chasespeed"],6],
+		[0,["set","chaseacceleration"],["property","chasespeed"]],
+		[0,["multiply","chaseacceleration"],2],
+
+		[0,["set","rotation"],["property","speedx"]],
+		[0,["divide","rotation"],16],
+
+		[0,["set","t_speedx"],["property","speedx"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]]
+	],
+}

@@ -1,0 +1,23 @@
+base=robbert
+{
+	"hidden": true,
+	
+	"movement": false,
+
+	"lifetime": 0.5,
+	"friction": true,
+	"resistsfire": true,
+
+	"transformsinto": "robbert",
+	"transformtrigger": "lifetime",
+	"transformpassedparameters": ["cansee","shothealth","quad","quadno"],
+	"transformsetparameters": [["xoff",0],["yoff",0]],
+
+	"customtimer": [
+		[0,"setframe",["property","quadno"]],
+		[0,["set","speedx"],["property","t_speedx"]],
+		[0,["reverse","speedx"]],
+		[0,["multiply","speedx"],1],
+	],
+	"dontloopcustomtimer": true,
+}

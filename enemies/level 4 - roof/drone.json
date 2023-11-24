@@ -1,0 +1,63 @@
+{
+	"quadcount": 8,
+	"nospritesets": true,
+
+	"quadcenterX": 16,
+	"quadcenterY": 8,
+	"offsetX": 12,
+	"offsetY": 3,
+	"spawnoffsety": -0.25,
+
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.025,
+	
+	"width": 1.5,
+	"height": 0.5,
+	"gravity": 0,
+	"dontmirror": true,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"movement": "chase",
+	"chasespeed": 4,
+	"chaseacceleration": 16,
+	"chasespace": 0,
+
+	"platform": true,
+	"platformchecktable": ["player"],
+
+	"spawnsenemy": "drone laser",
+	"spawnenemydelays": [99e99],
+
+	"customtimer": [
+		[4,["set","static"],true],
+		[0,["set","platform"],false],
+		[0,["set","loop"],3],
+
+		[0.1,["set","animationstart"],5],
+		[0,["add","quadi"],4],
+		[0,"setframe",["property","quadi"]],
+
+		[0.1,["set","animationstart"],1],
+		[0,["subtract","quadi"],4],
+		[0,"setframe",["property","quadi"]],
+
+		[0,["if","loop","==",1],["add","currentcustomtimerstage"],2],
+			[0,["subtract","loop"],1],
+			[0,["set","currentcustomtimerstage"], 3],
+
+		[0,"spawnenemy"],
+		[0.5,["set","static"],false],
+		[0,["set","platform"],true]
+	]
+}

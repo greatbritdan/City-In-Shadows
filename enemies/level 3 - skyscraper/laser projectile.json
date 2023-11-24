@@ -1,0 +1,39 @@
+{
+	"hidden": true,
+	
+	"quadcount": 5,
+	"nospritesets": true,
+
+	"offsetX": 6,
+	"offsetY": 2,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"width": 0.75,
+	"height": 0.75,
+	"gravity": 0,
+	"static": true,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, false, true, true,
+		false, true, false, true, false,
+		false, true, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"customtimer": [
+		[0.05,"setframe",2],
+		[0.05,"setframe",3],
+		[0.05,"setframe",4],
+		[0.05,"setframe",5],
+		[0.05,["set","static"],false]
+	],
+	"dontloopcustomtimer": true,
+
+	"transforms": true,
+	"transformsinto": "boomb",
+	"transformtrigger": "collide"
+}
