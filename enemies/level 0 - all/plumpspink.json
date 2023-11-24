@@ -1,0 +1,7 @@
+base=plumpkin
+{
+	"height": 1.25,
+	"offsetY": -1,
+	"kills": true,
+	"stompable": false
+}

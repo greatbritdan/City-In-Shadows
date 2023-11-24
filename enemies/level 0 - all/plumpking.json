@@ -1,0 +1,35 @@
+base=plumpkin
+{
+	"animationspeed": 0.25,
+	"animationscalex": 2,
+	"animationscaley": 2,
+
+	"width": 1.5,
+	"height": 2,
+
+	"truffleshufflespeed": 1,
+	"truffleshuffleacceleration": 4,
+
+	"transformsinto": ["plumpking stomp","plumpking stomp"],
+	"transformtrigger": ["stomp","shot"],
+
+	"customtimer": [
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]],
+
+		[6,["set","animationstart"],5],
+		[0,["add","quadi"],4],
+		[0,"setframe",["property","quadi"]],
+
+		[0.5,["set","animationstart"],1],
+		[0,["subtract","quadi"],4],
+		[0,"setframe",["property","quadi"]],
+
+		[0,["set","currentcustomtimerstage"], 2]
+	],
+
+	"offsetX": 12,
+	"offsetY": -1,
+	"quadcenterX": 8,
+	"quadcenterY": 12
+}

@@ -1,0 +1,23 @@
+base=coin switch
+{
+	"hidden":true,
+	"quadno":2,
+
+	"transformsinto":"white poof",
+	"transformtrigger":"lifetime",
+	"lifetime":7.5,
+
+	"loops":0,
+	"customtimer":[
+		[0.05,["set","active"],false],
+		[0,["add","customtimertimer"],1],
+
+		[0,["if","loops",">",4],["add","customtimertimer"],0.5],
+		[0,["if","loops",">",8],["add","customtimertimer"],0.25],
+		[0,["if","loops",">",12],["add","customtimertimer"],0.175],
+		[1,"playsound","coin switch pressed"],
+		[0,["add","loops"],1],
+		[0,["subtract","currentcustomtimerstage"],6]
+	],
+	"dontloopcustomtimer":true
+}

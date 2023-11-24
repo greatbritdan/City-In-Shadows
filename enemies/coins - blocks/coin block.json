@@ -1,0 +1,21 @@
+base=coin
+{
+	"rightclick":false,
+	"animationspeed":0.0625,
+
+	"nocoinblockanimation":true,
+	"showicononeditor": true,
+
+	"transformtrigger":"lifetime",
+	"lifetime":0.375,
+	"speedy":-15,
+
+	"customtimer":[
+		[0,["set","var1"],["property","speedy"]],
+		[0,["multiply","var1"],["property","customtimertimer"]],
+		[0,["add","y"],["property","var1"]],
+		[0,["multiply","customtimertimer"],80],
+		[0,["add","speedy"],["property","customtimertimer"]],
+		[0,["set","customtimertimer"],0]
+	],
+}

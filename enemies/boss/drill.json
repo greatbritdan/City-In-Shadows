@@ -1,0 +1,72 @@
+{
+	"t": "drill",
+
+	"quadcount": 8,
+	"nospritesets": true,
+	"showicononeditor": true,
+
+	"rightclick": [
+		["text","id"],
+		["dropdown","id",3,[1,2]]
+	],
+	"rightclicktypes": ["num"],
+	"rightclickdefaults": ["1"],
+
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 2,
+	"animationspeed": 0.1,
+
+	"offsetX": 6,
+	"offsetY": -4,
+	"quadcenterX": 8,
+	"quadcenterY": 12,
+	"spawnoffsety": -0.25,
+
+	"width": 0.75,
+	"height": 1.25,
+	"static": true,
+	"active": false,
+
+	"category": 8,
+	"mask": [true,
+		true, false, true, true, true,
+		false, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true],
+
+	"resistseverything": true,
+	"kills": true,
+
+	"transforms": true,
+	"transformsinto": "drill out",
+	"transformtrigger": "animation",
+	"transformpassedparameters": ["id"],
+
+	"hide": false,
+	"customtimer": [
+		[0,["if","id","==",1],["set","transformanimation"],"drillshow1"],
+		[0,["if","id","==",2],["set","transformanimation"],"drillshow2"],
+
+		[0,["if","hide","~=",true],["add","currentcustomtimerstage"],9],
+			[0,["set","animationstart"],7],
+			[0,["set","quadi"],7],
+			[0,"setframe",["property","quadi"]],
+
+			[0.1,["set","animationstart"],5],
+			[0,["subtract","quadi"],2],
+			[0,"setframe",["property","quadi"]],
+
+			[0.1,["set","animationstart"],3],
+			[0,["subtract","quadi"],2],
+			[0,"setframe",["property","quadi"]],
+
+			[0.1,["set","animationstart"],1],
+			[0,["subtract","quadi"],2],
+			[0,"setframe",["property","quadi"]]
+	],
+	"dontloopcustomtimer": true
+}

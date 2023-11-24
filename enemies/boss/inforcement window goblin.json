@@ -1,0 +1,54 @@
+base=window goblin
+{
+	"hidden": true,
+
+	"active": false,
+	"sticktoplayer": false,
+
+	"customtimer": [
+		[0,["set","quadstore"],["property","quadgroup"]],
+
+		[1,"setframe",2],
+		[0,["set","transforms"],false],
+		[0.5,"setframe",3],
+		[0.1,"setframe",4],
+		[0.1,"setframe",5],
+
+		[0,["set","quadgroup"],["property","playerobj"]],
+		[0,"setframe","x"],
+		[0,["set","xoff"],["property","quad"]],
+		[0,["subtract","xoff"],["property","x"]],
+		[0,"setframe","y"],
+		[0,["set","yoff"],["property","quad"]],
+		[0,["subtract","yoff"],["property","y"]],
+
+		[0,"this does this: xoff/(-ys+sqrt(ys^2+2grav*yoff)/grav), thanks williamfrog"],
+		[0,["set","res"],["property","spawnenemyspeedy"]],
+		[0,["multiply","res"],["property","spawnenemyspeedy"]],
+		[0,["set","temp"],["property","gravity"]],
+		[0,["multiply","temp"],["property","yoff"]],
+		[0,["multiply","temp"],2],
+		[0,["add","res"],["property","temp"]],
+		[0,["sqrt","res"]],
+		[0,["set","temp"],["property","spawnenemyspeedy"]],
+		[0,["reverse","temp"]],
+		[0,["add","res"],["property","temp"]],
+		[0,["divide","res"],["property","gravity"]],
+		[0,["set","temp"],["property","xoff"]],
+		[0,["divide","temp"],["property","res"]],
+		[0,["set","spawnenemyspeedx"],["property","temp"]],
+		[0,"spawnenemy"],
+
+		[0,["set","quadgroup"],["property","quadstore"]],
+		[0,"setframe",5],
+
+		[0.25,"setframe",4],
+		[0.1,"setframe",3],
+		[0.1,"setframe",2],
+		[0.1,"setframe",1],
+	],
+	"dontloopcustomtimer": false,
+	"transforms": false,
+
+	"lifetime": 2.25
+}

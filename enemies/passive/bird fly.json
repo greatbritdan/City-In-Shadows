@@ -1,0 +1,27 @@
+base=bird
+{
+	"hidden": true,
+	"spawnoffsety": 0,
+	"transforms": false,
+
+	"static": false,
+
+	"animationtype": "frames",
+	"animationframes": 2,
+	"animationstart": 2,
+	"animationspeed": 0.0625,
+
+	"speedx": -6,
+	"speedy": 0,
+	"gravity": 0,
+
+	"timer": 0,
+	"customtimer": [
+		[0,["set","dt"],["property","customtimertimer"]],
+		[0,["multiply","dt"],6],
+		[0,["add","timer"],["property","dt"]],
+		[0,["sin","speedy"],["property","timer"]],
+		[0,["set","customtimertimer"],0]
+	],
+	"dontloopcustomtimer": false
+}

@@ -1,0 +1,88 @@
+base=boss
+{
+	"hidden": true,
+	"sticktoplayer": false,
+	"spawnoffsety": 0,
+
+	"spawnsenemy": "inforcement window goblin",
+	"spawnpassedparameters": ["playerobj"],
+	"spawnenemyoffsety": -12.6875,
+	"spawnenemyoffsetx": 0.6875,
+
+	"customtimer": [
+		[0,"setframe",["property","phase"]],
+		[0,["set","quadsave"],["property","quad"]],
+
+		[0,["set","quadgroup"],["property","phaserisespeeds"]],
+		[0,"setframe",["property","phase"]],
+		[0,["set","risespeed"],["property","quad"]],
+		
+		[0,["set","quad"],["property","quadsave"]],
+		
+		[0,["set","newx"],["property","spawnpoint"]],
+		[0,["random","randx"],[6,0,-6]],
+		[0,["add","newx"],["property","randx"]],
+
+		[0,"// smoothly move to the new x position"],
+		[0,["set","diffx"],["property","newx"]],
+		[0,["subtract","diffx"],["property","x"]],
+		[0,["set","elapsed"],0],
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["set","changex"],["property","diffx"]],
+		[0,["set","dt"],["property","customtimertimer"]],
+		[0,["multiply","dt"],2],
+		[0,["multiply","changex"],["property","dt"]],
+		[0,["add","x"],["property","changex"]],
+
+		[0,["add","elapsed"],["property","customtimertimer"]],
+		[0,["if","elapsed",">=",0.5],["add","currentcustomtimerstage"],2],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]],
+
+		[0,"// emerge"],
+		[0,["set","speedy"],["property","risespeed"]],
+		[0,["reverse","speedy"]],
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["if","y",">",8],["add","currentcustomtimerstage"],6],
+			[0,["set","speedy"],0],
+			[0,"spawnenemy"],
+			[0,["if","phase",">",1],["add","currentcustomtimerstage"],2],
+				[0,["set","spawnenemyoffsetx"],-0.6875],
+				[0,"spawnenemy"],
+			[0,["add","currentcustomtimerstage"],2],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]],
+
+		[0,"// retreat!"],
+		[2.5,["set","speedy"],["property","risespeed"]],
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["if","y","<","floory"],["add","currentcustomtimerstage"],17],
+			[0,["set","quadgroup"],["property","phases"]],
+			[0,"setframe",["property","phase"]],
+			[0,["set","phaseatks"],["property","quad"]],
+			[0,["set","quadgroup"],["property","phasecounts"]],
+			[0,"setframe",["property","phase"]],
+			[0,["set","phasecount"],["property","quad"]],
+			[0,["add","phasecount"],1],
+
+			[0,["set","next"],["property","subphase"]],
+			[0,["add","next"],1],
+			[0,["if","next","==","phasecount"],["set","next"],1],
+			[0,["set","subphase"],["property","next"]],
+			[0,["set","quadgroup"],["property","phaseatks"]],
+			[0,"setframe",["property","subphase"]],
+
+			[0,["set","spawnsenemy"],["property","quad"]],
+			[0,["set","spawnenemy"],["property","transform"]],
+			[0,"spawnenemy"],
+			[99,"wait"],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]]
+	],
+}

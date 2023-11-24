@@ -1,0 +1,114 @@
+base=boss
+{
+	"hidden": true,
+	"sticktoplayer": false,
+	"spawnoffsety": 0,
+
+	"spawnsenemy": "boomb",
+	"spawnenemyoffsety": -16,
+
+	"customtimer": [
+		[0,["add","phase"],1],
+		[0,["set","subphase"],0],
+		[0,"setframe",["property","phase"]],
+
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyoffsetx"],-2,5],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyoffsetx"],-1.25],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyoffsetx"],1.25],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyoffsetx"],2.5],
+		[0,"spawnenemy"],
+
+		[0,["set","spawnenemy"],["property","triggeranimation"]],
+		[0,["set","spawnsenemy"],"boomb"],
+		[0,"spawnenemy"],
+
+		[0,["set","lastdrillstate"],["property","drillstate"]],
+		[0,["set","drillstate"],0],
+		[0,["if","lastdrillstate","~=",1],["add","currentcustomtimerstage"],2],
+			[0,["set","spawnsenemy"],"drillhide1"],
+			[0,"spawnenemy"],
+		[0,["if","lastdrillstate","~=",2],["add","currentcustomtimerstage"],2],
+			[0,["set","spawnsenemy"],"drillhide2"],
+			[0,"spawnenemy"],
+
+		[0,"// retreat!"],
+		[0,["if","phase","<",4],["add","currentcustomtimerstage"],16],
+			[0.5,["set","speedy"],8],
+			[0,["set","middle"],["property","x"]],
+			[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+			[0,["random","offx"],[0.25,0.1875,0.125,0.0625,0,-0.0625,-0.125,-0.1875,-0.25]],
+			[0,["set","x"],["property","middle"]],
+			[0,["add","x"],["property","offx"]],
+
+			[0,["if","y","<",15],["add","currentcustomtimerstage"],7],
+				[0,["set","spawnenemy"],["property","triggeranimation"]],
+				[0,["set","spawnsenemy"],"bossdie"],
+				[0,"spawnenemy"],
+
+				[0,["set","spawnsenemy"],"nil"],
+				[0,["set","spawnenemy"],["property","transform"]],
+				[0,"spawnenemy"],
+				[99,"wait"],
+
+			[0,["set","customtimertimer"],0],
+			[0,["set","currentcustomtimerstage"],["property","loopline"]],
+
+		[0.5,["set","speedy"],15],
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["if","y","<","floory"],["add","currentcustomtimerstage"],18],
+			[0,["set","y"],["property","floory"]],
+
+			[0,["set","quadgroup"],["property","phases"]],
+			[0,"setframe",["property","phase"]],
+			[0,["set","phaseatks"],["property","quad"]],
+			[0,["set","quadgroup"],["property","phasecounts"]],
+			[0,"setframe",["property","phase"]],
+			[0,["set","phasecount"],["property","quad"]],
+			[0,["add","phasecount"],1],
+	
+			[0,["set","next"],["property","subphase"]],
+			[0,["add","next"],1],
+			[0,["if","next","==","phasecount"],["set","next"],1],
+			[0,["set","subphase"],["property","next"]],
+			[0,["set","quadgroup"],["property","phaseatks"]],
+			[0,"setframe",["property","subphase"]],
+	
+			[0,["set","spawnsenemy"],["property","quad"]],
+			[0,["set","spawnenemy"],["property","transform"]],
+			[0,"spawnenemy"],
+			[99,"wait"],
+
+		[0,["set","dt"],["property","customtimertimer"]],
+		[0,["multiply","dt"],15],
+		[0,["add","speedy"],["property","dt"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]],
+		
+		[0,["set","quadgroup"],["property","phases"]],
+		[0,"setframe",["property","phase"]],
+		[0,["set","phaseatks"],["property","quad"]],
+		[0,["set","quadgroup"],["property","phasecounts"]],
+		[0,"setframe",["property","phase"]],
+		[0,["set","phasecount"],["property","quad"]],
+		[0,["add","phasecount"],1],
+
+		[0,["set","next"],["property","subphase"]],
+		[0,["add","next"],1],
+		[0,["if","next","==","phasecount"],["set","next"],1],
+		[0,["set","subphase"],["property","next"]],
+		[0,["set","quadgroup"],["property","phaseatks"]],
+		[0,"setframe",["property","subphase"]],
+
+		[0,["set","spawnsenemy"],["property","quad"]],
+		[0,["set","spawnenemy"],["property","transform"]],
+		[0,"spawnenemy"],
+		[99,"wait"]
+	],
+}

@@ -1,0 +1,65 @@
+{
+	"quadcount": 4,
+	"nospritesets": true,
+
+	"xoff": 0,
+	"rightclick": [
+		["text","xoffset:"],
+		["input","xoff",3],
+		["text","direction:"],
+		["dropdown","speedx",6,[-1,1],["left","right"]]
+	],
+	"rightclicktypes": ["num","num"],
+	"rightclickdefaults": ["0","-1"],
+
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.125,
+
+	"width": 0.5,
+	"height": 1.25,
+	"active": true,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, false, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"movement": "truffleshuffle",
+	"truffleshufflespeed": 2,
+	"truffleshuffleacceleration": 8,
+
+	"gravity": 10,
+	"bounces": true,
+	"bounceforce": 6,
+
+	"kills": true,
+	"killsenemies": true,
+	"killsenemiesonbottom": true,
+	"killsenemiesontop": false,
+	"killsenemiesonsides": false,
+	"killsenemiesonleft": false,
+	"killsenemiesonright": false,
+	"killsenemiesonpassive": false,
+
+	"transforms": true,
+	"transformsinto": "coin block",
+	"transformtrigger": "shot",
+
+	"customtimer": [
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"offsetX": 4,
+	"offsetY": -1,
+	"quadcenterX": 6,
+	"quadcenterY": 12
+}

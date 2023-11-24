@@ -1,0 +1,32 @@
+base=drill
+{
+	"hidden": true,
+	
+	"active": true,
+	"spawnoffsety": 0,
+
+	"transformsinto": "drill",
+	"transformsetparameters": [["hide",true],["spawnoffsety",0]],
+	"transformsetparametersbeforespawn": true,
+
+	"customtimer": [
+		[0,["if","id","==",1],["set","transformanimation"],"drillhide1"],
+		[0,["if","id","==",2],["set","transformanimation"],"drillhide2"],
+
+		[0,["set","animationstart"],1],
+		[0,["set","quadi"],1],
+		[0,"setframe",["property","quadi"]],
+
+		[0.1,["set","animationstart"],3],
+		[0,["add","quadi"],2],
+		[0,"setframe",["property","quadi"]],
+
+		[0.1,["set","animationstart"],5],
+		[0,["add","quadi"],2],
+		[0,"setframe",["property","quadi"]],
+
+		[0.1,["set","animationstart"],7],
+		[0,["add","quadi"],2],
+		[0,"setframe",["property","quadi"]]
+	],
+}

@@ -1,0 +1,26 @@
+{
+	"drawable": false,
+	"width": 0,
+	"height": 0,
+	"offsetX": 8,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+	"active": false,
+	"showicononeditor": true,
+
+	"nocoinblockanimation": true,
+
+	"spawnsenemy": "coin block",
+	"spawnenemydelays": [99e99],
+	"spawnenemyspeedy": -15,
+
+	"transformtrigger": "lifetime",
+	"lifetime": 0.75,
+
+	"customtimer": [
+		[0,"spawnenemy"],
+		[0.15,"spawnenemy"],
+		[0,["set","currentcustomtimerstage"],1]
+	],
+}

@@ -1,0 +1,5 @@
+base=white poof
+{
+	"animationtriggeronspawn":"1coin",
+	"queueanimationtrigger":true
+}

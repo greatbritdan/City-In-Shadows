@@ -1,0 +1,34 @@
+{
+	"quadcount": 4,
+	"nospritesets": true,
+	"drawback": true,
+
+	"offsetX": 8,
+	"offsetY": -3,
+	"quadcenterX": 11,
+	"quadcenterY": 11,
+	"spawnoffsety": -0.25,
+	
+	"width": 1,
+	"height": 0.5,
+	"active": false,
+
+	"rightclick": [
+		["text","type:"],
+		["dropdown","quadno",7,[1,2,3,4],["left","right","left b","right b"]],
+		["text","xoffset:"],
+		["input","xoff",3],
+		["text","yoffset:"],
+		["input","yoff",3]
+	],
+	"rightclicktypes": ["num","num","num"],
+	"rightclickdefaults": ["1","0","0"],
+
+	"customtimer": [
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]],
+		[0,["divide","yoff"],16],
+		[0,["add","y"],["property","yoff"]]
+	],
+	"dontloopcustomtimer": true
+}

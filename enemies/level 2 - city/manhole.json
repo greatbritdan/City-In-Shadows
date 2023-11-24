@@ -1,0 +1,50 @@
+{
+	"quadcount": 4,
+	"nospritesets": true,
+	"useicononeditor": true,
+
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.05,
+
+	"offsetX": 8,
+	"offsetY": -32,
+	"quadcenterX": 8,
+	"quadcenterY": 40,
+	"spawnoffsety": -0.75,
+
+	"width": 1,
+	"height": 0.25,
+	"gravity": 20,
+	"static": true,
+	
+	"platform": true,
+	"platformchecktable": ["player"],
+	"platformcollisionup": true,
+
+	"portalable": false,
+	"customscissor": [0,-6.75,1,7],
+
+	"category": 2,
+	"mask": [true, 
+		true, false, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"spawnchildrenparent": true,
+	"spawnchildren": ["manhole hurt"],
+
+	"customtimer": [
+		[1,["set","speedy"],-13],
+		[0,["set","static"],false],
+		[1.1,["set","speedy"],-7],
+		[0.92,["set","static"],true],
+		[0,["ceil","y"]]
+	],
+	"dontloopcustomtimer": false
+}

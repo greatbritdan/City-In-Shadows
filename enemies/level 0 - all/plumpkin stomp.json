@@ -1,0 +1,18 @@
+base=plumpkin
+{
+	"hidden": true,
+	"quadno": 9,
+
+	"animationtype": false,
+	"active": false,
+
+	"lifetime": 0.375,
+	"transformsinto": "coin block",
+	"transformtrigger": "lifetime",
+
+	"customtimer": [
+		[0.0625,"setframe",10],
+		[0.0625,"setframe",11],
+	],
+	"dontloopcustomtimer": true
+}

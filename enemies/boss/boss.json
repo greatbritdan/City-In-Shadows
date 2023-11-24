@@ -1,0 +1,100 @@
+{
+	"t": "boss",
+	
+	"quadcount": 4,
+	"nospritesets": true,
+	"showicononeditor": true,
+
+	"offsetX": 48,
+	"offsetY": -120,
+	"quadcenterX": 48,
+	"quadcenterY": 128,
+	"spawnoffsety": 16.5,
+
+	"width": 6,
+	"height": 16,
+	"gravity": 0,
+
+	"category": 7,
+	"mask": [true,
+		false, false, true, true, true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true],
+
+	"drawback": true,
+	"platformcollisionup": true,
+	"ignoreleftcollide": true,
+	"ignorerightcollide": true,
+
+	"resistseverything": true,
+	"nocollidestops": true,
+	"sticktoplayer": 1,
+
+	"dontmirror": true,
+	"platform": true,
+	"platformchecktable": ["player"],
+
+	"spawnsenemy": "nil",
+	"spawnenemydelays": [99e99],
+	"transformpassedparameters": ["playerobj","phase","subphase","spawnpoint","drillstate"],
+
+	"phase": 1,
+	"subphase": 0,
+	"phases": [
+		["boss attack", "boss plumpkin", "boss rest", "boss windows"],
+		["boss attack", "boss plumpkin", "boss rest", "boss windows"],
+		["boss attack", "boss plumpkin", "boss rest", "boss plumpkin"]
+	],
+	"phasecounts": [4,4,4],
+	"phaseatkspeeds": [4,7,10],
+	"phaserisespeeds": [8,10,12],
+
+	"drillstate": 0,
+
+	"floory": 12.5,
+	"roofy": 3,
+	"customtimer": [
+		[0,"setframe",["property","phase"]],
+		[0,["set","quadsave"],["property","quad"]],
+
+		[0,["set","spawnpoint"],["property","startx"]],
+
+		[0,["set","passivecollide"],["property","addoutput"]],
+		[0,["set","customtimertimer"],0],
+		[0,["set","quadgroup"],["property","outtable"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",2],
+		[0,["set","playerobj"],["property","quad"]],
+
+		[0,["set","sticktoplayer"]],
+		[0,["set","x"],["property","spawnpoint"]],
+		[0,["set","y"],["property","floory"]],
+
+		[0,["set","quad"],["property","quadsave"]],
+
+		[1,["set","quadgroup"],["property","phases"]],
+		[0,"setframe",["property","phase"]],
+		[0,["set","phaseatks"],["property","quad"]],
+		[0,["set","quadgroup"],["property","phasecounts"]],
+		[0,"setframe",["property","phase"]],
+		[0,["set","phasecount"],["property","quad"]],
+		[0,["add","phasecount"],1],
+
+		[0,["set","next"],["property","subphase"]],
+		[0,["add","next"],1],
+		[0,["if","next","==","phasecount"],["set","next"],1],
+		[0,["set","subphase"],["property","next"]],
+		[0,["set","quadgroup"],["property","phaseatks"]],
+		[0,"setframe",["property","subphase"]],
+
+		[0,["set","spawnsenemy"],["property","quad"]],
+		[0,["set","spawnenemy"],["property","transform"]],
+		[0,"spawnenemy"],
+		[99,"wait"]
+	],
+}

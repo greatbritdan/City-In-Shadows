@@ -1,0 +1,66 @@
+{
+	"quadcount":5,
+	"nospritesets":true,
+	"showicononeditor":true,
+
+	"xoff":0,
+	"yoff":0,
+	"rightclick":[
+		["text","xoffset:"],
+		["input","xoff",3],
+		["text","yoffset:"],
+		["input","yoff",3]
+	],
+	"rightclicktypes":["num","num"],
+	"rightclickdefaults":["0","0"],
+
+	"animationtype":"frames",
+	"animationframes":5,
+	"animationstart":1,
+	"animationspeed":0.125,
+
+	"width":0.75,
+	"height":0.75,
+	"active":false,
+	"resistseverything":true,
+	"spawnoffsety":-0.125,
+
+	"transforms":true,
+	"transformsinto":"coin sparkle",
+	"transformtrigger":"playernear",
+	"playerneardist":[0,0,0.75,0.75],
+
+	"sintimer":0,
+	"customtimer":[
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]],
+		[0,["divide","yoff"],16],
+		[0,["add","y"],["property","yoff"]],
+
+		[0,["if","spawn","~=",true],["add","currentcustomtimerstage"],2],
+			[0,["set","playsound"],["property","spawnenemy"]],
+			[0,"playsound","white poof"],
+
+
+		[0,["if",["property","lifetimer"],"notexists",""],["add","currentcustomtimerstage"],6],
+			[0,["subtract","lowtimer"],["property","customtimertimer"]],
+			[0,["if","lowtimer",">",0],["add","currentcustomtimerstage"],4],
+				[0,["add","lowtimer"],0.125],
+				[0,["reverse","transparent"]],
+				[0,["set","graphiccolor"]],
+				[0,["if","transparent","==",true],["set","graphiccolor"],[255,255,255,75]],
+
+		[0,["multiply","customtimertimer"],4],
+		[0,["add","sintimer"],["property","customtimertimer"]],
+		[0,["sin","rotation"],["property","sintimer"]],
+		[0,["divide","rotation"],4],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],7]
+	],
+
+	"offsetX":6,
+	"offsetY":2,
+	"quadcenterX":8,
+	"quadcenterY":8
+}

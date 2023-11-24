@@ -1,0 +1,40 @@
+{
+	"hidden": true,
+	"quadcount": 1,
+	"nospritesets": true,
+
+	"offsetX": 8,
+	"offsetY": -4,
+	"quadcenterX": 8,
+	"quadcenterY": 2,
+	"spawnoffsety": -0.25,
+
+	"width": 0.5,
+	"height": 4.75,
+	"static": true,
+
+	"kills": true,
+
+	"category": 2,
+	"mask": [true, 
+		true, false, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"customtimer": [
+		[0,["set","quadstore"],["property","quad"]],
+		[0,["set","quadgroupstore"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","parent"]],
+		[0,"setframe","x"],
+		[0,["set","x"],["property", "quad"]],
+		[0,["add","x"],0.25],
+		[0,"setframe","y"],
+		[0,["set","y"],["property", "quad"]],
+		[0,["add","y"],0.25],
+		[0,["set","customtimertimer"],0]
+	]
+}

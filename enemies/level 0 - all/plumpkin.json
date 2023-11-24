@@ -1,0 +1,66 @@
+{
+	"quadcount": 12,
+	"nospritesets": true,
+
+	"xoff": 0,
+	"rightclick": [
+		["text","xoffset:"],
+		["input","xoff",3],
+		["text","direction:"],
+		["dropdown","speedx",6,[-1,1],["left","right"]]
+	],
+	"rightclicktypes": ["num","num"],
+	"rightclickdefaults": ["0","-1"],
+
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.125,
+
+	"width": 0.75,
+	"height": 1,
+	"active": true,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, false, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"movement": "truffleshuffle",
+	"truffleshufflespeed": 2,
+	"truffleshuffleacceleration": 8,
+	"turnaroundoncliff": true,
+
+	"killsonsides": true,
+	"killsonbottom": true,
+
+	"stompable": true,
+	"transforms": true,
+	"transformsinto": ["plumpkin stomp","coin block"],
+	"transformtrigger": ["stomp","shot"],
+
+	"customtimer": [
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]],
+
+		[3,["set","animationstart"],5],
+		[0,["add","quadi"],4],
+		[0,"setframe",["property","quadi"]],
+
+		[0.25,["set","animationstart"],1],
+		[0,["subtract","quadi"],4],
+		[0,"setframe",["property","quadi"]],
+
+		[0,["set","currentcustomtimerstage"], 2]
+	],
+
+	"offsetX": 6,
+	"offsetY": 3,
+	"quadcenterX": 8,
+	"quadcenterY": 12
+}

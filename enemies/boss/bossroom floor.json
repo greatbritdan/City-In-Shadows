@@ -1,0 +1,15 @@
+{
+	"spawnonload": true,
+	
+	"quadcount": 1,
+	"nospritesets": true,
+
+	"offsetX": 184,
+	"offsetY": 0,
+	"quadcenterX": 184,
+	"quadcenterY": 16,
+
+	"width": 23,
+	"height": 2.4375,
+	"active": false
+}

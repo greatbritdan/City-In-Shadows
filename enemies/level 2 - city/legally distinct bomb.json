@@ -1,0 +1,30 @@
+{
+	"hidden": true,
+	
+	"quadcount": 5,
+	"nospritesets": true,
+
+	"offsetX": 6,
+	"offsetY": 3,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"width": 0.75,
+	"height": 0.75,
+	"friction": true,
+
+	"category": 4,
+	"mask": [true, 
+		false, true, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"transforms": true,
+	"transformsinto": ["legally distinct bomb active","boomb"],
+	"transformtrigger": ["playernear","shot"],
+	"playerneardist": [-3,-3,6.75,6.75]
+}

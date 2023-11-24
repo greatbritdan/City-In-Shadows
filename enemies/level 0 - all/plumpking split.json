@@ -1,0 +1,25 @@
+base=plumpking
+{
+	"hidden": true,
+
+	"animationtype": false,
+	"active": false,
+	"transforms": false,
+
+	"quadno": 11,
+	"lifetime": 0.025,
+
+	"spawnsenemy": "plumpkin",
+	"spawnenemydelays": [99e99],
+	"spawnenemyspeedy": -15,
+	"customtimer": [
+		[0,["set","spawnenemyspeedx"],-15],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedx"],15],
+		[0,"spawnenemy"],
+		[0,["set","spawnsenemy"],"white poof big"],
+		[0,["set","spawnenemyspeedx"]],
+		[0,"spawnenemy"],
+	],
+	"dontloopcustomtimer": true
+}

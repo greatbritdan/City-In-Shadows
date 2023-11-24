@@ -1,0 +1,63 @@
+{
+	"hidden": true,
+
+	"quadcount": 1,
+	"nospritesets": true,
+
+	"width": 0.75,
+	"height": 0.75,
+
+	"category": 2,
+	"mask": [true, 
+		false, false, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"kills": true,
+	"breaksblocks": true,
+	"breakblockside": "floor",
+
+	"transforms": true,
+	"transformsinto": "nil",
+	"transformtrigger": "collide",
+	"dotransformaftercollision": true,
+
+	"spawnsenemy": "debrie debris",
+	"spawnenemydelays": [99e99],
+	"spawnsetparametersbeforespawn": true,
+
+	"static": true,
+	"customtimer": [
+		[0,["set","spawnenemyoffsetx"],-0.25],
+		[0,["set","spawnenemyoffsety"],-0.25],
+		[0,["set","spawnenemyspeedx"],-6],
+		[0,["set","spawnenemyspeedy"],-6],
+		[0,["set","spawnsetparameters"],[["framei",1]]],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedy"],0],
+		[0,["set","spawnenemyoffsety"],0.25],
+		[0,["set","spawnsetparameters"],[["framei",2]]],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyoffsetx"],0.25],
+		[0,["set","spawnenemyoffsety"],-0.25],
+		[0,["set","spawnenemyspeedx"],6],
+		[0,["set","spawnenemyspeedy"],-6],
+		[0,["set","spawnsetparameters"],[["framei",3]]],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyoffsety"],0.25],
+		[0,["set","spawnenemyspeedy"],0],
+		[0,["set","spawnsetparameters"],[["framei",4]]],
+		[0,"spawnenemy"],
+		[0,["set","static"],false]
+	],
+	"dontloopcustomtimer": true,
+
+	"offsetX": 6,
+	"offsetY": 2,
+	"quadcenterX": 6,
+	"quadcenterY": 6
+}

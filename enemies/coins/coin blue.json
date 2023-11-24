@@ -1,0 +1,40 @@
+{
+	"spawnonload":true,
+	"spawnoffsety":-0.125,
+	"width":0.75,
+	"height":0.75,
+	"active":false,
+	"resistseverything":true,
+
+	"transforms":true,
+	"transformsinto":"coin blue show",
+	"transformtrigger":"animation",
+	"transformpassedparameters":["xoff","yoff","sintimer"],
+
+	"sintimer":0,
+	"customtimer":[
+		[0,["multiply","customtimertimer"],4],
+		[0,["add","sintimer"],["property","customtimertimer"]],
+		[0,["set","customtimertimer"],0]
+	],
+
+	"switchid":"coinswitch1",
+	"xoff":0,
+	"yoff":0,
+	"rightclick":[
+		["text","switchid:"],
+		["dropdown","transformanimation",3,["coinswitch1","coinswitch2","coinswitch3"],["1","2","3"]],
+		["text","xoffset:"],
+		["input","xoff",3],
+		["text","yoffset:"],
+		["input","yoff",3]
+	],
+	"rightclicktypes":["string","num","num"],
+	"rightclickdefaults":["coinswitch1","0","0"],
+
+	"showicononeditor":true,
+	"quadcenterX":8,
+	"quadcenterY":8,
+	"offsetX":6,
+	"offsetY":2,
+}

@@ -1,0 +1,39 @@
+{
+	"hidden": true,
+	
+	"quadcount": 4,
+	"nospritesets": true,
+
+	"width": 0.75,
+	"height": 0.75,
+	"active": true,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, true, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"gravity": 20,
+	"lifetime": 5,
+	"kills": true,
+
+	"offsetX": 6,
+	"offsetY": 2,
+	"quadcenterX": 6,
+	"quadcenterY": 6,
+
+	"customtimer": [
+		[0,["random","rand"],[1,2,3,4]],
+		[0,"setframe",["property","rand"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"transforms": true,
+	"transformsinto": ["white poof","white poof"],
+	"transformtrigger": ["lifetime","collide"]
+}

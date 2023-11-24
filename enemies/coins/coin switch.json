@@ -1,0 +1,42 @@
+{
+	"quadcount":2,
+	"nospritesets":true,
+	
+	"quadcenterX":8,
+	"quadcenterY":4,
+	"offsetX":6,
+	"offsetY":8,
+	"drawback":true,
+
+	"width":0.75,
+	"height":0.5,
+
+	"static":true,
+	"category":2,
+	"mask":[true],
+	"resistseverything":true,
+	"freezable":false,
+
+	"transforms":true,
+	"transformsinto":"coin switch pressed",
+	"transformtrigger":"ceilcollide",
+	"transformtriggerobjectcollide":"player",
+	"treattransformasdeath":true,
+
+	"customtimer":[
+		[0,["divide","xoff"],16],
+		[0,["add","x"],["property","xoff"]]
+	],
+	"dontloopcustomtimer":true,
+
+	"switchid":"coinswitch1",
+	"offx":0,
+	"rightclick":[
+		["text","switchid:"],
+		["dropdown","transformenemyanimationondeath",3,["coinswitch1","coinswitch2","coinswitch3"],["1","2","3"]],
+		["text","xoffset:"],
+		["input","xoff",3]
+	],
+	"rightclicktypes":["string","num"],
+	"rightclickdefaults":["coinswitch1","0"]
+}

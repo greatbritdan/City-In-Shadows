@@ -1,0 +1,35 @@
+base=legally distinct bomb
+{
+	"hidden": true,
+	
+	"animationtype": "frames",
+	"animationframes": 2,
+	"animationstart": 2,
+	"animationspeed": 0.2,
+
+	"movement": "chase",
+	"chasespeed": 4,
+	"chaseacceleration": 16,
+	"chasespace": 1,
+
+	"lifetime": 3,
+	"transformsinto": ["boomb","boomb"],
+	"transformtrigger": ["lifetime","shot"],
+	"playerneardist": false,
+
+	"customtimer": [
+		[2,["set","animationstart"],4],
+		[0,["add","quadi"],2],
+		[0,"setframe",["property","quadi"]],
+
+		[0.1,["set","animationstart"],2],
+		[0,["subtract","quadi"],2],
+		[0,"setframe",["property","quadi"]],
+
+		[0.1,["set","animationstart"],4],
+		[0,["add","quadi"],2],
+		[0,"setframe",["property","quadi"]],
+
+		[0,["set","currentcustomtimerstage"], 3]
+	]
+}

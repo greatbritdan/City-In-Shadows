@@ -1,0 +1,10 @@
+base=coin
+{
+	"hidden":true,
+	"transformsinto":["coin blue sparkle","white poof"],
+	"transformtrigger":["playernear","lifetime"],
+	"lifetime":7.5,
+	"spawn":true,
+	"lowtimer":5,
+	"transparent":false
+}

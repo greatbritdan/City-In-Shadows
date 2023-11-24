@@ -1,0 +1,63 @@
+{
+	"quadcount": 5,
+	"nospritesets": true,
+	"drawback": true,
+
+	"width": 0.75,
+	"height": 0.75,
+	"static": true,
+	"gravity": 20,
+
+	"category": 4,
+	"mask": [true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true],
+
+	"offsetX": 6,
+	"offsetY": 12,
+	"quadcenterX": 10,
+	"quadcenterY": 16,
+
+	"spawnsenemy": "junk",
+	"spawnenemydelays": [99e99],
+	"spawnenemyspeedy": -12,
+	"spawnenemyspeedx": 0,
+
+	"resistseverything": true,
+	"nocollidestops": true,
+	"sticktoplayer": 1,
+	"dontstopmario": true,
+
+	"playerobj": false,
+	"customtimer": [
+		[0,["if",["property","playerobj"],"~=",false],["add","currentcustomtimerstage"],10],
+			[0,["set","quadstore"],["property","quadgroup"]],
+			[0,["set","passivecollide"],["property","addoutput"]],
+			[0,["set","customtimertimer"],0],
+			[0,["set","quadgroup"],["property","outtable"]],
+			[0,"setframe",1],
+			[0,["set","quadgroup"],["property","quad"]],
+			[0,"setframe",2],
+			[0,["set","playerobj"],["property","quad"]],
+			[0,["set","quadgroup"],["property","quadstore"]],
+			[0,"setframe",1],
+
+		[0,["set","sticktoplayer"]],
+		[0,["set","x"],["property","startx"]],
+		[0,["set","y"],["property","starty"]],
+		[0,["set","transforms"],true],
+		[0,["set","active"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"transforms": false,
+	"transformsinto": "window goblin active",
+	"transformtrigger": "playernear",
+	"playerneardist": [-7,-1,14.75,9.75],
+	"transformpassedparameters": ["playerobj"]
+}

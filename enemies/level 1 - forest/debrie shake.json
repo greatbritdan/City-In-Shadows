@@ -1,0 +1,22 @@
+base=debrie
+{
+	"hidden": true,
+	
+	"lifetime": 0.4,
+	"transformsinto": "debrie fall",
+	"transformtrigger": "lifetime",
+	"playerneardist": false,
+
+	"timer": 0,
+	"customtimer": [
+		[0,["add","timer"],["property","customtimertimer"]],
+
+		[0,["set","sintimer"],["property","timer"]],
+		[0,["multiply","sintimer"],48],
+		[0,["sin","sin"],["property","sintimer"]],
+		[0,["set","offsetX"],8],
+		[0,["add","offsetX"],["property","sin"]],
+
+		[0,["set","customtimertimer"],0],
+	]
+}

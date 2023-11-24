@@ -1,0 +1,29 @@
+{
+	"quadcount": 1,
+	"nospritesets": true,
+	"drawback": true,
+	
+	"quadcenterX": 16,
+	"quadcenterY": 16,
+	"offsetX": 8,
+	"offsetY": -8,
+
+	"width": 1,
+	"height": 1,
+	"active": false,
+
+	"timer": 0,
+	"time": 0.5,
+	"customtimer": [
+		[0,["add","timer"],["property","customtimertimer"]],
+		[0,["if","timer","<","time"],["add","currentcustomtimerstage"],3],
+			[0,["reverse","drawable"]],
+			[0,["subtract","timer"],["property","time"]],
+			[0,["random","time"],[0.05,0.05,0.1,0.25,0.75,1,1,1,1.5,2]],
+		[0,["set","customtimertimer"],0]
+	],
+
+	"rightclickmenuboolean": true,
+	"rightclickmenu": ["dontloopcustomtimer",true,false],
+	"rightclickmenudisplay": ["flicker?","no","yes"]
+}

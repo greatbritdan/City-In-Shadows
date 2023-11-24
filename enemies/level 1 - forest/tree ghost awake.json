@@ -1,0 +1,32 @@
+base=tree ghost
+{
+	"hidden": true,
+	"quadno": 2,
+
+	"transformsinto": "tree ghost",
+	"transformtrigger": "playernotnear",
+
+	"spawnsenemy": "stick",
+	"spawnenemydelays": [99e99],
+	"spawnmax": 0,
+
+	"spawnenemyoffsety": -0.25,
+	"spawnenemyspeedx": 0,
+	"spawnenemyspeedy": -8,
+	"spawnenemyspeedxtowardsplayer": true,
+
+	"customtimer": [
+		[2,"setframe",3],
+
+		[0.5,["set","spawnenemyspeedx"],-4],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedx"],-5],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedx"],-6],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedx"],-7],
+		[0,"spawnenemy"],
+
+		[0,"setframe",2]
+	]
+}

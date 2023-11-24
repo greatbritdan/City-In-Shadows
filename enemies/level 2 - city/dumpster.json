@@ -1,0 +1,33 @@
+{
+	"quadcount": 1,
+	"nospritesets": true,
+	"drawback": true,
+
+	"offsetX": 16,
+	"offsetY": 0,
+	"quadcenterX": 16,
+	"quadcenterY": 12,
+
+	"width": 2,
+	"height": 1.25,
+	"active": false,
+	"autodelete": false,
+
+	"spawnsenemy": "legally distinct bomb",
+	"spawnenemydelays": [2.5],
+	"spawnmax": 1,
+
+	"spawnenemyoffsety": -0.25,
+	"spawnenemyspeedy": -15,
+	"spawnenemyspeedx": 6,
+	"spawnenemyspeedxtowardsplayer": true,
+
+	"spawnsetparameters": [
+		["transformpassedparameters",["speedx","speedy"]],
+		["customscissor",[-0.375, 0.375, 1.75, 1]],
+		["invertedscissor", true],
+		["customtimer", [[0.25,["set","customscissor"]]]],
+		["dontloopcustomtimer", true]
+	],
+	"spawnsetparametersbeforespawn": true
+}

@@ -1,0 +1,39 @@
+{
+	"hidden": true,
+
+	"quadcount": 4,
+	"nospritesets": true,
+
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.0625,
+
+	"width": 0.375,
+	"height": 0.375,
+	"active": true,
+
+	"category": 7,
+	"mask": [true, 
+		false, false, false, true, true,
+		true, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"gravity": 20,
+	"lifetime": 2,
+	"kills": true,
+	"killsenemies": true,
+
+	"offsetX": 3,
+	"offsetY": 5,
+	"quadcenterX": 4,
+	"quadcenterY": 4,
+
+	"transforms": true,
+	"transformsinto": ["nil","nil"],
+	"transformtrigger": ["lifetime","collide"]
+}
