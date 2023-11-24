@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "nextlevel" ] ],
+    "conditions": [ [ "worldequals", "1" ], [ "levelequals", "5" ], [ "sublevelequals", "2" ] ],
+    "triggers": [ [ "buttonpressed", "reload", "everyone" ] ]
+}

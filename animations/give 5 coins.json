@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "addcoins", "5" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "5coin" ] ]
+}

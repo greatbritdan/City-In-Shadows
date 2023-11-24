@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "sleep", "1" ], [ "playerwalk", "everyone", "right", 3 ], [ "sleep", "0.5" ], [ "dialogbox", "turns out it was a total bust, nothing worth    saving... but despite that it was nice to come  back after all this time...", "%player% - {jump} to continue", "white" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "dialogbox", "but i couldnt help but notice some anomalies    in some of the gaps, maybe one day i'll come    back and see what it's all about. but for now   i just want to move on...", "%player% - {jump} to continue", "white" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "sleep", "0.5" ], [ "nextlevel" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "endingcut" ] ]
+}

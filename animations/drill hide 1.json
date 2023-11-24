@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "transformenemy", "drillhide1" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "drillhide1" ] ]
+}

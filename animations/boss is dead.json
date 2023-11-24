@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "animationoutput", "bossdie", "on" ], [ "killallenemies" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "bossdie" ] ]
+}

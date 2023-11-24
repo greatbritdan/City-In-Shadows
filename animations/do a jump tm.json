@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "playerjump", "everyone" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "jumpboi" ] ]
+}

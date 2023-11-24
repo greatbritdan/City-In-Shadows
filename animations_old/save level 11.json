@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "removecoins", "40" ], [ "playsound", "checkpoint" ], [ "animationoutput", "save11", "on" ], [ "setnumber", "save11", "=", "1" ] ],
+    "conditions": [ [ "ifcoins", ">", "39" ] ],
+    "triggers": [ [ "animationtrigger", "save11" ] ]
+}

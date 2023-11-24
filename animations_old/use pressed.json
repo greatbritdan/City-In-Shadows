@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "animationoutput", "use", "on" ], [ "sleep", "0.05" ], [ "animationoutput", "use", "off" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "buttonpressed", "use", "everyone" ] ]
+}

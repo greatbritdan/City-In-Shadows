@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "screenshake", "7" ], [ "playsound", "boom" ], [ "playsound", "blockbreak" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "boomb" ] ]
+}

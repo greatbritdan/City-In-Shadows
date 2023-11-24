@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "setx", "everyone", "25" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "lvl2win" ] ]
+}

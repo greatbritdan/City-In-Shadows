@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "enablecontrols", "everyone" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "yem" ] ]
+}

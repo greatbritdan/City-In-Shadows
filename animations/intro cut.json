@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "changeforeground", "foresthud" ], [ "sleep", "1" ], [ "dialogbox", "people called me selfish... stupid...           no one has been in the city for years, there is nothing left to see...", "%player% - {jump} to continue", "white" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "dialogbox", "i don't buy it... the city is hiding something, up in that giant tower... maybe it's rare, i    could sell it and live comfortably for the rest of my life...", "%player% - {jump} to continue", "white" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "dialogbox", "or maybe... my life will end at the arms of somedemon inside the walls... yeah it's probably thelatter, it is a britdan mappack...", "%player% - {jump} to continue", "white" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "loadlevelinstant", "1", "2", "0", "1" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "introcut" ] ]
+}

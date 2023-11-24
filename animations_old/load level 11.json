@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "animationoutput", "save11", "on" ] ],
+    "conditions": [ [ "worldequals", "10" ], [ "levelequals", "1" ], [ "ifnumber", "save11", "=", "1" ] ],
+    "triggers": [ [ "mapload" ] ]
+}

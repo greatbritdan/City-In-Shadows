@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "sety", "everyone", "16" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "downending" ] ]
+}
