@@ -5,7 +5,6 @@ base=boss
 	"phaserisespeeds": [12,14,16],
 	"deathanim": "bossharddie",
 
-	"phase": 3,
 	"phases": [
 		["boss attack", "boss attack", "boss plumpkin", "boss windows",  "boss rest", "boss plumpkin"],
 		["boss attack", "boss attack", "boss windows",  "boss plumpkin", "boss rest", "boss plumpkin"],
