@@ -1,5 +1,5 @@
 {
-    "actions": [ [ "setx", "everyone", "25" ] ],
+    "actions": [ [ "setx", "everyone", "26" ] ],
     "conditions": [  ],
     "triggers": [ [ "animationtrigger", "lvl2win" ] ]
 }
