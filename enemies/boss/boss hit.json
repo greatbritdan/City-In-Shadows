@@ -10,7 +10,9 @@ base=boss
 	"customtimer": [
 		[0,["add","phase"],1],
 		[0,["set","subphase"],0],
-		[0,"setframe",["property","phase"]],
+		[0,["set","newframe"],["property","phase"]],
+		[0,["if","hardmode","==",true],["add","newframe"],4],
+		[0,"setframe",["property","newframe"]],
 
 		[0,"spawnenemy"],
 		[0,["set","spawnenemyoffsetx"],-2,5],
@@ -47,7 +49,7 @@ base=boss
 
 			[0,["if","y","<",15],["add","currentcustomtimerstage"],7],
 				[0,["set","spawnenemy"],["property","triggeranimation"]],
-				[0,["set","spawnsenemy"],"bossdie"],
+				[0,["set","spawnsenemy"],["property","deathanim"]],
 				[0,"spawnenemy"],
 
 				[0,["set","spawnsenemy"],"nil"],

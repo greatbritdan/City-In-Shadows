@@ -22,8 +22,15 @@
 	"active": false,
 	"static": true,
 
-	"blowrange": [-2,0,2,0.5],
-	"blowspeedx": -40,
+	"transforms": true,
+	"transformsinto": "venti trapped",
+	"transformtrigger": "playernear",
+	"playerneardist": [0,0,0.75,0.5],
+	"transformpassedparameters": ["dir","animationdirection","animationscalex"],
+	
+	"blowrange": [-3,0,3,0.5],
+	"blowspeedx": -70,
+	"blowspeedy": -50,
 
 	"spawnallow": false,
 	"spawnsenemy": "blowpart",
@@ -43,8 +50,8 @@
 		[0,["set","spawnallow"]],
 		[0,["if","dir","~=","right"],["add","currentcustomtimerstage"],5],
 			[0,["set","animationscalex"],-1],
-			[0,["set","blowrange"],[0.75,0,2,0.5]],
-			[0,["set","blowspeedx"],40],
+			[0,["set","blowrange"],[0.75,0,3,0.5]],
+			[0,["set","blowspeedx"],70],
 			[0,["set","spawnenemyoffsetx"],0.375],
 			[0,["set","spawnenemyspeedx"],4],
 

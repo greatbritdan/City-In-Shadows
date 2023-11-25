@@ -1,7 +1,7 @@
 {
 	"t": "boss",
 	
-	"quadcount": 4,
+	"quadcount": 8,
 	"nospritesets": true,
 	"showicononeditor": true,
 
@@ -40,13 +40,19 @@
 
 	"spawnsenemy": "nil",
 	"spawnenemydelays": [99e99],
-	"transformpassedparameters": ["playerobj","phase","subphase","spawnpoint","drillstate"],
+	"transformpassedparameters": [
+		"playerobj","phase","subphase","spawnpoint","drillstate","farleft","farright",
+		"hardmode","phaseatkspeeds","phaserisespeeds","phases","phasecounts","deathanim"
+	],
+
+	"hardmode": false,
+	"deathanim": "bossdie",
 
 	"phase": 1,
 	"subphase": 0,
 	"phases": [
 		["boss attack", "boss plumpkin", "boss rest", "boss windows"],
-		["boss attack", "boss plumpkin", "boss rest", "boss windows"],
+		["boss attack", "boss windows",  "boss rest", "boss plumpkin"],
 		["boss attack", "boss plumpkin", "boss rest", "boss plumpkin"]
 	],
 	"phasecounts": [4,4,4],
@@ -59,10 +65,16 @@
 	"roofy": 3,
 	"customtimer": [
 		[0,["set","drawable"],false],
-		[0,"setframe",["property","phase"]],
+		[0,["set","newframe"],["property","phase"]],
+		[0,["if","hardmode","==",true],["add","newframe"],4],
+		[0,"setframe",["property","newframe"]],
 		[0,["set","quadsave"],["property","quad"]],
-
+		
 		[0,["set","spawnpoint"],["property","startx"]],
+		[0,["set","farleft"],["property","spawnpoint"]],
+		[0,["subtract","farleft"],8.5],
+		[0,["set","farright"],["property","spawnpoint"]],
+		[0,["add","farright"],8.5],
 
 		[0,["set","passivecollide"],["property","addoutput"]],
 		[0,["set","customtimertimer"],0],

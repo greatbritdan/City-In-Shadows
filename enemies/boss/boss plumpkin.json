@@ -12,7 +12,9 @@ base=boss
 	"spawnenemyspeedxtowardsplayer": true,
 
 	"customtimer": [
-		[0,"setframe",["property","phase"]],
+		[0,["set","newframe"],["property","phase"]],
+		[0,["if","hardmode","==",true],["add","newframe"],4],
+		[0,"setframe",["property","newframe"]],
 		[0,["set","quadsave"],["property","quad"]],
 
 		[0,["set","quadgroup"],["property","phaserisespeeds"]],

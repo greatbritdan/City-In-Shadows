@@ -5,7 +5,9 @@ base=boss
 	"spawnoffsety": 0,
 
 	"customtimer": [
-		[0,"setframe",["property","phase"]],
+		[0,["set","newframe"],["property","phase"]],
+		[0,["if","hardmode","==",true],["add","newframe"],4],
+		[0,"setframe",["property","newframe"]],
 		[0,["set","quadsave"],["property","quad"]],
 
 		[0,["set","y"],["property","floory"]],
@@ -15,8 +17,8 @@ base=boss
 		[0,"setframe","x"],
 		[0,["set","newx"],["property","quad"]],
 		[0,["subtract","newx"],2.625],
-		[0,["max","newx"],26],
-		[0,["min","newx"],43],
+		[0,["max","newx"],["property","farleft"]],
+		[0,["min","newx"],["property","farright"]],
 
 		[0,["set","quadgroup"],["property","phaseatkspeeds"]],
 		[0,"setframe",["property","phase"]],

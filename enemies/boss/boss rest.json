@@ -5,7 +5,9 @@ base=boss
 	"spawnoffsety": 0,
 
 	"customtimer": [
-		[0,"setframe",["property","phase"]],
+		[0,["set","newframe"],["property","phase"]],
+		[0,["if","hardmode","==",true],["add","newframe"],4],
+		[0,"setframe",["property","newframe"]],
 
 		[0,["set","spawnenemy"],["property","triggeranimation"]],
 		[0,["set","lastdrillstate"],["property","drillstate"]],

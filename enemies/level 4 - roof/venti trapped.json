@@ -1,0 +1,13 @@
+base=venti
+{
+	"hidden": true,
+	
+	"rightclick": false,
+	"blowrange": false,
+	"customtimer": false,
+	"spawnsenemy": false,
+
+	"transformsinto": "venti",
+	"transformtrigger": "playernotnear",
+	"playerneardist": [0,0,0.75,0.5],
+}

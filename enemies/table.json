@@ -1,0 +1,28 @@
+{
+	"quadcount": 1,
+	"nospritesets": true,
+
+	"offsetX": 40,
+	"offsetY": 0,
+	"quadcenterX": 40,
+	"quadcenterY": 8,
+
+	"width": 5,
+	"height": 1,
+
+	"category": 2,
+	"mask": [true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, false],
+
+	"resistseverything": true,
+	"freezable": false,
+
+	"trackable": true,
+	"trackplatform": true
+}

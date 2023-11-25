@@ -1,6 +1,8 @@
 {
 	"quadcount": 8,
 	"nospritesets": true,
+	"showicononeditor": true,
+	"spawnonload": true,
 
 	"quadcenterX": 16,
 	"quadcenterY": 8,

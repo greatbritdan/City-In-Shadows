@@ -1,8 +1,11 @@
 {
 	"spawnonload": true,
-	
-	"quadcount": 1,
+
+	"quadcount": 2,
 	"nospritesets": true,
+
+	"rightclickmenu": ["quadno",1,2],
+	"rightclickmenudisplay": ["type","reg","hard"],
 
 	"offsetX": 184,
 	"offsetY": 0,
