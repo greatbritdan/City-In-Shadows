@@ -1,5 +1,5 @@
 {
-    "actions": [ [ "launchplayer", "everyone", "0", "0" ], [ "playmusic", "none" ], [ "sleep", "1" ], [ "playsound", "castleend" ], [ "playerwalk", "everyone", "right", 3 ], [ "sleep", "4.4" ], [ "nextlevel" ] ],
+    "actions": [ [ "launchplayer", "everyone", "0", "0" ], [ "playmusic", "none" ], [ "sleep", "1" ], [ "playsound", "castleend" ], [ "playerwalk", "everyone", "right", 3 ], [ "sleep", "3.5" ], [ "addcoins", "25" ], [ "sleep", "0.5" ], [ "nextlevel" ] ],
     "conditions": [  ],
     "triggers": [ [ "animationtrigger", "win" ] ]
 }
