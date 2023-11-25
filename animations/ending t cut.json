@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "disablecontrols", "everyone" ], [ "sleep", "1" ], [ "dialogbox", "i didn't know what to expect to walk away with  when i first decided to come here, but i did notexpect to be walking home with enough money to  live comfortably for the next 10 years...", "%player% - {jump} to continue", "white" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "dialogbox", "i'm glad i went through the trouble to collect  those valuables, and who knows. maybe i missed afew and can come back for them... another day   maybe...", "%player% - {jump} to continue", "white" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "nextlevel" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "endingtcut" ] ]
+}

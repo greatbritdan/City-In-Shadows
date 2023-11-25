@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "loadlevel", "1", "5", "3", "1" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "vault" ] ]
+}

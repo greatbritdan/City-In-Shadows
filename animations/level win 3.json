@@ -1,5 +1,5 @@
 {
-    "actions": [ [ "launchplayer", "everyone", "0", "-30" ], [ "sleep", "0.5" ], [ "sety", "everyone", "18" ] ],
+    "actions": [ [ "launchplayer", "everyone", "0", "-30" ], [ "sleep", "0.5" ], [ "sety", "everyone", "17" ] ],
     "conditions": [  ],
     "triggers": [ [ "animationtrigger", "win3" ] ]
 }

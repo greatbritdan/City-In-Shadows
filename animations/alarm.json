@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "sleep", "1" ], [ "dialogbox", "attention.                                      attention.                                      breach detected in the vault.                   sending backup.", "system - {jump} to continue", "red" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "removedialogbox" ], [ "sleep", "0.5" ], [ "animationoutput", "bosshard", "toggle" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "alarm" ] ]
+}

@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "animationoutput", "bossharddie", "on" ], [ "killallenemies" ], [ "disablecontrols", "everyone" ], [ "sleep", "0.5" ], [ "dialogbox", "threat detained. systems returning to neutral.", "system - {jump} to continue", "red" ], [ "sleep", "0.5" ], [ "waitforinput", "jump", "everyone" ], [ "removedialogbox" ], [ "enablecontrols", "everyone" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "bossharddie" ] ]
+}
