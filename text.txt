@@ -1,6 +1,6 @@
 endingtextcolor=255, 255, 255
 endingcolorname=white
-endingtext=congratulations!,you have finished this mappack!
+endingtext=you fleed the city!,come back again...
 playername=mario
 hudtextcolor=255, 255, 255
 hudcolorname=white
