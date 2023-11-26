@@ -25,6 +25,8 @@
 	"transformsinto": "nil",
 	"transformtrigger": "collide",
 	"dotransformaftercollision": true,
+	"edible":true,
+	"copyability":"stone",
 
 	"spawnsenemy": "debrie debris",
 	"spawnenemydelays": [99e99],

@@ -29,7 +29,10 @@
 
 	"customtimer": [
 		[0,["random","rand"],[1,2,3,4]],
-		[0,"setframe",["property","rand"]]
+		[0,"setframe",["property","rand"]],
+		[0,["if","rand","==",1],["set","copyability"],"spark"],
+		[0,["if","rand","==",3],["set","copyability"],"wheel"],
+		[0,["if","rand","==",4],["set","copyability"],"stone"],
 	],
 	"dontloopcustomtimer": true,
 

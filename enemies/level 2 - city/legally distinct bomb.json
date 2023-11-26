@@ -23,6 +23,20 @@
 		true, false, true, true, true,
 		false],
 
+	"wcddeathproperties":{
+		"deathscript":false,
+		"deatheffect":"boomb",
+		"deatheffectoffsety":0.375,
+		"instantdelete":true,
+		"active":false,
+		"drawable":false,
+		"nodeaththrow":true,
+		"dead":true,
+	},
+	"wcdvulnerable":true,
+	"edible":true,
+	"copyability":"bomb",
+
 	"transforms": true,
 	"transformsinto": ["legally distinct bomb active","boomb"],
 	"transformtrigger": ["playernear","shot"],

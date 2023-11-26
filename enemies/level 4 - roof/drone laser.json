@@ -23,6 +23,7 @@
 		true, true, true, true, true,
 		true, true, true, true, true,
 		true],
+	"resistseverything":true,
 
 	"kills": true,
 

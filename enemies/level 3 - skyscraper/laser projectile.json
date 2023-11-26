@@ -24,6 +24,14 @@
 		true, false, true, true, true,
 		false],
 
+	"copyability":"light",
+	"wcddeathproperties":{
+		"nodeaththrow":true,
+		"instantdelete":true,
+		"active":false
+	},
+	"nowcdknockback":true,
+
 	"customtimer": [
 		[0.05,"setframe",2],
 		[0.05,"setframe",3],

@@ -1,8 +1,6 @@
 {
 	"quadcount": 8,
 	"nospritesets": true,
-	"showicononeditor": true,
-	"spawnonload": true,
 
 	"quadcenterX": 16,
 	"quadcenterY": 8,
@@ -29,6 +27,7 @@
 		false, true, true, false, false,
 		true, false, true, true, true,
 		false],
+	"resistseverything":true,
 
 	"movement": "chase",
 	"chasespeed": 4,

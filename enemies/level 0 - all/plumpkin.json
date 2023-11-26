@@ -18,7 +18,7 @@
 	"animationspeed": 0.125,
 
 	"width": 0.75,
-	"height": 1,
+	"height": 0.75,
 	"active": true,
 
 	"category": 4,
@@ -62,5 +62,5 @@
 	"offsetX": 6,
 	"offsetY": 3,
 	"quadcenterX": 8,
-	"quadcenterY": 12
+	"quadcenterY": 17
 }

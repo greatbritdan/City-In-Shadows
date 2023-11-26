@@ -5,7 +5,7 @@ base=plumpkin
 	"animationscaley": 2,
 
 	"width": 1.5,
-	"height": 2,
+	"height": 1.75,
 
 	"truffleshufflespeed": 1,
 	"truffleshuffleacceleration": 4,
@@ -29,7 +29,5 @@ base=plumpkin
 	],
 
 	"offsetX": 12,
-	"offsetY": -1,
-	"quadcenterX": 8,
-	"quadcenterY": 12
+	"offsetY": -7,
 }

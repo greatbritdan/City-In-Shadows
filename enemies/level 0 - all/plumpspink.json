@@ -1,7 +1,8 @@
 base=plumpkin
 {
-	"height": 1.25,
-	"offsetY": -1,
+	"copyability":"needle",
+	"height": 1,
+	"offsetY": -2,
 	"kills": true,
 	"stompable": false
 }

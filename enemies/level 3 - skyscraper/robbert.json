@@ -30,7 +30,16 @@
 
 	"kills": true,
 
+	"wcddeathproperties":{
+		"deathscript":false,
+		"instantdelete":true,
+		"active":false,
+		"drawable":false,
+	},
+	"wcdhealth":4,
 	"shothealth": 3,
+	"inedible":true,
+
 	"transforms": true,
 	"transformtriggerobjectcollide": "tile",
 	"transformsinto": ["coin block","robbert bump","robbert bump","robbert bump"],
