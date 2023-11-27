@@ -25,6 +25,8 @@
 		true, false, true, true, true,
 		false],
 
+	"resistseverything": true,
+
 	"customtimer": [
 		[0,["set","quadstore"],["property","quad"]],
 		[0,["set","quadgroupstore"],["property","quadgroup"]],
