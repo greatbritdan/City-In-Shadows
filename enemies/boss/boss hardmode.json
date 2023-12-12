@@ -1,8 +1,8 @@
 base=boss
 {
 	"hardmode": true,
-	"phaseatkspeeds": [9,12,14],
-	"phaserisespeeds": [12,14,16],
+	"phaseatkspeeds": [6,8,10],
+	"phaserisespeeds": [9,11,13],
 	"deathanim": "bossharddie",
 
 	"phases": [

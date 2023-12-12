@@ -11,6 +11,7 @@ base=boss
 		[0,["set","quadsave"],["property","quad"]],
 
 		[0,["set","y"],["property","floory"]],
+		[0,"playsound","cannonfast"],
 		
 		[0,"// get new x position"],
 		[0,["set","quadgroup"],["property","playerobj"]],

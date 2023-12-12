@@ -56,8 +56,8 @@
 		["boss attack", "boss plumpkin", "boss rest", "boss plumpkin"]
 	],
 	"phasecounts": [4,4,4],
-	"phaseatkspeeds": [4,7,10],
-	"phaserisespeeds": [8,10,12],
+	"phaseatkspeeds": [4,5.5,7],
+	"phaserisespeeds": [7,9,11],
 
 	"drillstate": 0,
 
